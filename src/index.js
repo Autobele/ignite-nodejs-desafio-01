@@ -106,7 +106,7 @@ app.patch('/todos/:id/done', checksExistsUserAccount, (request, response) => {
 app.delete('/todos/:id', checksExistsUserAccount, (request, response) => {
   // Complete aqui
   const { user } = request
-  const { id } = request.params
+  const { id } = request.params;
   
   const todoIndex = user.todos.findIndex(todo => todo.id === id)
 
